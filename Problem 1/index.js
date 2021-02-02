@@ -11,3 +11,15 @@ console.log("Problem 1");
 // if i is a multiple of 3 or 5, push into sum array
 // add sum array together
 // return value
+
+const euler = (n) => {
+	let answer = [];
+	for (let i = 0; i < n; i++) {
+		if (i % 5 === 0 || i % 3 === 0) {
+			answer.push(i);
+		}
+	}
+	return answer.reduce((a, b) => a + b);
+};
+
+console.log(euler(1000));
