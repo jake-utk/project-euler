@@ -1,9 +1,15 @@
 Explanation for Solution:
 
+I am not especially proud of this solution - it seems like a flawed way to do it.  My pseudocode wasn't great, but I was confident that it would result in a correct answer.  The Fibonacci sequence gives you the first two positions, 1 & 2, and expects the sequence to continue from there indefinitely.  So I set my currentNumber to 1 and nextNumber to 2, and run the sequence for as long as my currentNumber doesn't go beyond n in a while loop.
 
+From here, I first check to make sure the currentNumber is even.  If it is, I push it into my answer array for later summation.  Otherwise, I exit the conditional and proceed to the next number in the fibonacci sequence by adding currentNumber to nextNumber, resetting currentNumber as nextNumber, and setting nextNumber equal to the previous sum.
+
+Once currentNumber is above n, the while loop will break and my return statement includes a .reduce() function to quickly add the even numbers I've saved in the answer array to return the integer we're seeking - the sum of all even digits in the fibonacci sequence through n.
 
 Explanation for One-Liner:
 
-
+Did not find one liner possible on examination.
 
 Complexity:
+
+Time complexity is linear O(N) as we have to iterate once to form the fibonacci sequence and again to sum the evens.  Space complexity is worsened by the creation of an outside array to hold values the length of which grows proportionately to n.
