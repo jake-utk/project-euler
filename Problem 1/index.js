@@ -12,6 +12,7 @@ console.log("Problem 1");
 // add sum array together
 // return value
 
+// Solution
 const euler = (n) => {
 	let answer = [];
 	for (let i = 0; i < n; i++) {
@@ -21,5 +22,13 @@ const euler = (n) => {
 	}
 	return answer.reduce((a, b) => a + b);
 };
-
 console.log(euler(1000));
+
+// One Liner
+const eulerGolf = (n) =>
+	Array(n)
+		.fill()
+		.map((e, i) => i)
+		.filter((e) => e % 3 === 0 || e % 5 === 0)
+		.reduce((a, b) => a + b);
+console.log(eulerGolf(1000));
