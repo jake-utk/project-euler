@@ -1,15 +1,7 @@
-/// TEMPLATE
-
-console.log("online");
-
-// Address
+// URL
 
 // Problem
 
 // Solution
 
 // One Liner
-
-// Explanation
-
-// Complexity
